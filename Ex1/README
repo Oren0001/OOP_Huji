@@ -1,0 +1,33 @@
+oren503
+
+
+
+
+=============================
+=      File description     =
+=============================
+Book.java - Represents a specific copy of a book that a library can hold.
+Patron.java - Represents a library patron that has a name and assigns values to different
+              literary aspects of books.
+Library.java - Each library can hold a certain number of books, and manage a certain number of patrons
+               registered to it.
+
+
+=============================
+=          Design           =
+=============================
+The Patron class uses the Book class in order to determine if a patron will enjoy a specific book.
+The library class uses both the Book class and the Patron class in order to register patrons
+to libraries, and let them do different actions with the books.
+
+
+=============================
+=  Implementation details   =
+=============================
+In the Library class I used the arrays, bookStorage and patronsRegistered, to represent book IDs
+and patron IDs. The arrays contain Book and Patron instances, and each index of an array represents an ID.
+Moreover, I used the array - booksPatronBorrowed, which it's indices represent a patron's ID
+and each element shows how many books the patron has borrowed.
+I also made sure each library has her unique book and patron IDs. That way, for example, if a patron is
+registered to two different libraries - library1 and library2, and he borrows a book from library1,
+the book's id doesn't exist in library2. Thus, the patron cant return the book to library2.

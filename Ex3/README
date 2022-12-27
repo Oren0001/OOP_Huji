@@ -1,0 +1,79 @@
+oren503
+
+
+
+
+=============================
+=      File description     =
+=============================
+Locker.java - Represents lockers. Each locker has it's own capacity to hold items.
+LockerTest.java - Tests the different methods of the Locker's API.
+LongTermStorage.java - Represents a long-term storage of a spaceship.
+LongTermTest.java - Tests the different methods of the LongTermStorage's API.
+Spaceship.java - Represents a spaceship which has a name, crew members, and storage lockers.
+SpaceshipTest.java - Tests the different methods of the Spaceship's API.
+SpaceshipDepositoryTest.java - A test suite for the Spaceship Depository program.
+BoopingSite.java - Represents a hotel booking site that allows for personalized search methodologies.
+BoopingSiteTest.java - Tests the different methods of the BoopingSite's API.
+
+
+
+=============================
+=          Design           =
+=============================
+1. I used an abstract class named Storage, because of the next reasons:
+   * The methods, Locker and LongTermStorage, have "is-a" relation and implementation in common.
+   * I needed to implement abstract classes.
+   * An instance doesn't make sense.
+
+2. I used nested classes in the BoopingSite class because of the next reasons:
+   * They are useful only to the BoopingSite class.
+   * Increased encapsulation and readability.
+   * They are relatively small.
+
+3. getHotelsInCityByRating:
+   I used a local class, because It is used only within this method.
+
+4. getHotelsByProximity & getHotelsInCityByProximity:
+   I used a static class, because both of them use it as a comparator.
+
+
+
+=============================
+=  Implementation details   =
+=============================
+1. Locker & LongTermStorage:
+   * I used a hash map to represent the locker, where the keys are item types and the values are
+     their respective quantities. I chose a hash map because that way we can easily
+     access the number of items of the given type. Moreover, I chose the keys to be item types,
+     because it simplifies the methods getItemCount and getInventory.
+   * In the Locker class I used a helper method, printMessage, to print all the required messages.
+
+2. Reasons for choosing the dataset for each test:
+   * testByRatingAndProperty, testByProximityAndPOI -
+     I used the smaller dataset because I wanted to focus only on a specific city, and this dataset
+     helps me do it.
+   * testInCityByRating, testInCityByProximity -
+     I didn't use the empty dataset, because I needed to test if the hotels are located in the given city.
+   * testInCityByRatingReturnEmpty, testByProximityReturnEmpty, testInCityByProximityReturnEmpty -
+     I used all of the datasets to cover a variety of scenarios.
+   * testNotInCityByProximity -
+     I used the larger dataset, because this time i didn't need to focus on a specific city.
+
+Notes:
+* The locker's addItem method returns -1 if n<1, because n items cannot be added to the locker.
+  Additionally, we will get an error message: "Error: Your request cannot be completed at this time.",
+  because this scenario isn't covered by the description, but could potentially take place.
+
+* The locker's removeItem returns -1 if n=0, because 0 items cannot be removed from the locker.
+  The error message aforementioned will also appear in this case from the same reason.
+
+* In the instructions it says "The new Locker is associated with a crew member with the given id",
+  so in the spaceship class I also created a hashmap named 'idToLockers', in which a key represents a crew
+  member's ID, and a value is an array list that contains all the lockers associated with the crew member.
+
+
+=============================
+=    Answers to questions   =
+=============================
+There weren't any.

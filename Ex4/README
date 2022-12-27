@@ -1,0 +1,79 @@
+oren503
+
+
+
+
+=============================
+=      File description     =
+=============================
+SimpleHashSet.java - A superclass for implementations of hash-sets implementing the SimpleSet interface.
+OpenHashSet.java - A hash-set based on chaining.
+ClosedHashSet.java - A hash-set based on closed-hashing with quadratic probing.
+CollectionFacadeSet.java - Wraps an underlying Collection and serves to both simplify its API and give
+                           it a common type with the implemented SimpleHashSets.
+SimpleSetPerformanceAnalyzer.java - Measures the run-times of SimpleSet's methods for the requested
+                                    data structures.
+RESULTS - The runtime results of SimpleSetPerformanceAnalyzer.
+
+
+
+=============================
+=          Design           =
+=============================
+1. I used a nested class in OpenHashSet.java, because of the next reasons:
+    * It is useful only to it's enclosing class.
+    * Increased encapsulation and readability.
+    * It is relatively small.
+
+2. I used a factory method in SimplePerformanceAnalyzer to create all the requested data structures.
+
+
+
+=============================
+=  Implementation details   =
+=============================
+1. Implementation of OpenHashSet's table:
+   I Defined a wrapper-class that has a LinkedList<String>, delegated methods to it, and used an
+   array of that class. The wrapper-class is useful only to OpenHashSet, so it made sense to implement
+   it as a nested class.
+
+2. Implementation of the deletion mechanism in ClosedHashSet:
+   I created an empty string named "DELETED" to represent all of the deleted values.
+   By using the syntax: "new String("")", and also using == instead of equals() to compare the values,
+   I made sure that the class' functionality won't be restricted. e.g. we are still able to add any string
+   we would like, particularly "".
+
+
+
+=============================
+=    Answers to questions   =
+=============================
+Q: Why OpenHashSet and ClosedHashSet have bad results for data1.txt?
+A: Note that data1 contains 99,999 different words with the same hash, therefore collisions surely
+   occur a lot.
+   Searching for "hi" was very fast, because it has a different hashCode than the words in data1.
+   In contrast, searching for "-13170890158" took much more time, because collision occurs.
+
+Q: Summarize the strengths and weaknesses of each of the data structures as reflected by the results.
+   Which would you use for which purposes?
+A: OpenHashSet & ClosedHashSet: Doesn't work very well with data1 because of the collisions,
+                                but works great with data2 because of the natural mixture of the words.
+   TreeSet: Works great both for data1 and data2.
+   LinkedList: Poor performance in data1 and data2. Exception to that is the time it took to find "23"
+               in data2, because it appears at the beginning of the array.
+   HashSet: Works best for data1 and data2.
+   * I would use all of them, except LinkedList, for search, add or delete purposes.
+
+Q: How did your two implementations compare between themselves?
+A: Regarding data2, the difference is negligible.
+   Regarding data1, OpenHashSet did better than ClosedHashSet.
+
+Q: How did your implementations compare to java's built in HashSet?
+A: Regarding data2, the difference is negligible.
+   Regarding data1, java's built in HashSet did significantly better than my implementations.
+
+Q: Did you find java's HashSet performance on data1.txt surprising? Can you explain it?
+A: Java's HashSet performance on data1 was indeed surprising, because it did much better than my
+   implementations. The reason is related to the initial capacity, for example if we will set the initial
+   capacity to 17 instead of 16, ClosedHashSet will perform significantly better,
+   almost as good as java's HashSet.

@@ -1,0 +1,51 @@
+oren503
+
+
+
+
+=============================
+=      File description     =
+=============================
+SpaceShip.java - Constitutes a super-class for different kinds of ships in the game.
+SpaceShipFactory.java - Creates all the spaceship objects according to the command line arguments.
+HumanShip.java - Represents a human controlled ship.
+AggressiveShip.java - Represents an Aggressive ship that pursues other ships and tries to fire at them.
+BasherShip.java - Represents a Basher ship which attempts to collide with other ships.
+RunnerShip.java - Represents a Runner ship which attempts to run away from the fight.
+DrunkardShip.java - Represents a Drunkard ship.
+SpecialShip.java - Represents a peaceful ship that attacks only when it feels threatened.
+
+
+
+=============================
+=          Design           =
+=============================
+I chose an abstract class - SpaceShip, for the design of my program. I think it's most suitable
+because all the different kinds of ships are of the same thing. Additionally, an instance of SpaceShip
+doesn't make any sense.
+The program's built and design are easy to understand - SpaceWars acts as the "driver" of the game,
+SpaceShipFactory is responsible for creating all the instances and SpaceShip is the super class
+of all kinds of ships. Moreover, creating new ships with different abilities is pretty easy, as I
+did with the SpecialShip and the DrunkardShip.
+
+
+
+=============================
+=  Implementation details   =
+=============================
+* SpecialShip - This spaceship constantly floats in the space, unless it gets hit (by a shot or a collision)
+                by an opponent. When this happens, it starts pursuing the closest ship, and when it's
+                angle to the closest ship is less than 0.18 radians, it will attempt to fire.
+                If it gets within a distance of 0.19 units from the opponent, it will attempt to activate
+                its shields. In addition, if the SpecialShip collides with the opponent while its shields
+                are activated, it disables the opponent - i.e. it won't be able to move at all for a period
+                of 35 rounds. At last, it stops pursuing the opponent only when it dies.
+* DrunkardShip - This spaceship constantly accelerates, spins and emits bullets, as it's name describes.
+* I kept track of the rounds by creating a data member - currentRound. It helped me, for example,
+  to know when a fire was shot and how many rounds passed since that shot.
+
+
+=============================
+=    Answers to questions   =
+=============================
+There weren't any.

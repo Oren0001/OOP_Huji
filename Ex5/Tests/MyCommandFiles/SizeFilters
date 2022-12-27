@@ -1,0 +1,12 @@
+FILTER
+greater_than#2
+ORDER
+abs
+FILTER
+between#5#10
+ORDER
+abs
+FILTER
+smaller_than#50.5
+ORDER
+abs

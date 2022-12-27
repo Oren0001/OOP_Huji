@@ -1,0 +1,16 @@
+FILTER
+file#file1.txt
+ORDER
+abs
+FILTER
+contains#ile
+ORDER
+abs
+FILTER
+prefix#fi
+ORDER
+abs
+FILTER
+suffix#.txt
+ORDER
+abs

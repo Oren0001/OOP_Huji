@@ -1,0 +1,106 @@
+oren503
+
+
+
+
+=============================
+=      File description     =
+=============================
+filesprocessing/CommandReader.java:
+Parses the Commands file.
+
+filesprocessing/DirectoryProcessor.java:
+Acts as the manager of the program. Gets a directory of files and a command file as arguments,
+and prints the files' names according to the command file.
+
+sections/Section.java:
+Represents a section of the command file which contains a filter and an order.
+
+sections/BadFormatException.java:
+Thrown when there is an incorrect format of the commands file, e.g. no Order or Filter sub-sections.
+
+sections/BadSubSectionNameException.java:
+Thrown when there is an incorrect sub-section name, i.e. not FILTER or ORDER.
+
+sections/SectionException.java:
+The super-class of exceptions which are related to section errors in the commands file,
+e.g. bad sub-section name and bad format of the section.
+
+subsections/Filter.java:
+Represents filters of the commands file.
+
+subsections/Order.java:
+Represents a requested order of a section in the commands file.
+
+subsections/FilesMergeSort.java:
+A singleton class which sorts files given in an array list, using Merge sort.
+
+subsections/FiltersFactory.java:
+Creates all the possible filters of the commands file, and uses them to filter files.
+
+subsections/OrdersFactory.java:
+Creates all the possible orders of the commands file, and uses them to sort the files.
+
+subsections/BadFilterNameException.java:
+Thrown when there is an incorrect filter name, e.g. 'betweeen' instead of 'between'.
+
+subsections/BadValueException.java:
+Thrown when there is an incorrect value of a filter or an order.
+
+subsections/SubSectionException.java:
+A super-class of exceptions which are related to sub-section errors in the commands file,
+e.g. incorrect values of filters or orders.
+
+
+=============================
+=          Design           =
+=============================
+1. Filter:
+  I used a Functional Interface for the filters, because they have only one purpose -
+  to check whether or not the given file values pass the filter.
+  I built a filters factory to initialize the filters , that way we are able to add
+  new filters by only accessing the filters factory which preserves the open/close principle.
+
+2. Order:
+  I used a Functional Interface for the filters, because they have only one purpose -
+  to sort the filtered files. I also built in this case an orders factory for the same reason.
+  In addition, I have used an anonymous class and local classes in the orders factory for the next reasons:
+  - They are useful only to their enclosing method.
+  - Increased encapsulation and readability.
+  - They are relatively small.
+
+3. I built the Merge sort class as a singleton, because there is no need for more than one instance of it.
+
+4. I used the Delegation design pattern in CommandReader.java, by composing a BufferedReader object
+   and forwarding requests to it's methods.
+
+5. I used DirectoryProcessor as the manager of the program. First it uses the CommandReader class
+   to parse the commands file and get all the sections, then it gets the filtered files by accessing
+   the Filters Factory and using the sections. Finally, it prints the sorted files names by using
+   the orders factory and the sections.
+
+
+=============================
+=  Implementation details   =
+=============================
+1. I used lambdas to implement the filters, because the implementations were relatively short.
+
+2. Exceptions Hierarchy:
+   * I created SectionException.java to handle all the exceptions related to a section error.
+     Therefore, it has sub-classes: BadFormatException and BadSubSectionNameException, to handle cases
+     where the sub-section name isn't FILTER/ORDER or there is a problem with the sections format.
+   * I also created SubSectionException.java to handle all the exceptions related to a sub-section error.
+     Therefore, it has sub-classes: BadFilterNameException and BadValueException, to handle cases
+     where the filter's name is incorrect or the subsection's values are incorrect.
+
+
+=============================
+=    Answers to questions   =
+=============================
+Q: How did you sort your matched files? Did you use a data structure for this purpose?
+   If so, what data structure and why?
+
+A: I sorted the matched files by implementing my own Merge sort function.
+   The sort function can get a comparator to determine how the files will be sorted.
+   I used an array list as the data structure, because it is the same data structure which contains the
+   matched files. That way, i don't need to convert it to a different data structure.

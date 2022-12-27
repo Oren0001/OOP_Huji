@@ -1,0 +1,646 @@
+----------------Warning_DefaultFilter------------------
+
+----------------InvalidSubSectionName------------------
+ERROR: Bad subsection name
+
+----------------InvalidCommandFiles------------------
+ERROR: Bad format of Commands File
+
+----------------invalidSubSectionOrderName------------------
+ERROR: Bad subsection name
+
+----------------Sanity------------------
+HELLO2.csv
+a.txt
+emptyFile
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+file2.txt
+file1.txt
+.DS_Store
+
+----------------invalidFilter------------------
+Warning in line 2
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+
+----------------OrderAndFilterAreInvalid------------------
+Warning in line 2
+Warning in line 4
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+
+----------------ContainsEmptyString------------------
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+
+----------------filter11.txt------------------
+ERROR: Bad subsection name
+
+----------------DefaultOrder------------------
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+
+----------------Reversed------------------
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+zzzzzzzzzzzzzzzz.txt
+zzzz copy.txt
+nsnkas.txt
+hello.csv
+file2.txt
+file1.txt
+emptyFile
+a.txt
+HELLO2.csv
+.DS_Store
+
+----------------NotAsArgumnet------------------
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+
+----------------AllOrders------------------
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+emptyFile
+HELLO2.csv
+hello.csv
+a.txt
+file1.txt
+file2.txt
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+HELLO2.csv
+a.txt
+emptyFile
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+file2.txt
+file1.txt
+.DS_Store
+
+----------------ReversedOrder------------------
+zzzzzzzzzzzzzzzz.txt
+zzzz copy.txt
+nsnkas.txt
+hello.csv
+file2.txt
+file1.txt
+emptyFile
+a.txt
+HELLO2.csv
+.DS_Store
+zzzzzzzzzzzzzzzz.txt
+zzzz copy.txt
+nsnkas.txt
+file2.txt
+file1.txt
+a.txt
+hello.csv
+HELLO2.csv
+emptyFile
+.DS_Store
+.DS_Store
+file1.txt
+file2.txt
+zzzzzzzzzzzzzzzz.txt
+zzzz copy.txt
+nsnkas.txt
+hello.csv
+emptyFile
+a.txt
+HELLO2.csv
+
+----------------SizeFilters------------------
+.DS_Store
+file1.txt
+.DS_Store
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+
+----------------NameFilters------------------
+file1.txt
+emptyFile
+file1.txt
+file2.txt
+file1.txt
+file2.txt
+a.txt
+file1.txt
+file2.txt
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+
+----------------NegativeSize------------------
+Warning in line 2
+Warning in line 6
+Warning in line 10
+Warning in line 18
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+HELLO2.csv
+a.txt
+emptyFile
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+
+----------------5ValidSections------------------
+.DS_Store
+file1.txt
+file2.txt
+.DS_Store
+file1.txt
+.DS_Store
+file1.txt
+.DS_Store
+.DS_Store
+.DS_Store
+
+----------------AllFilters------------------
+.DS_Store
+file1.txt
+.DS_Store
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+file1.txt
+emptyFile
+file1.txt
+file2.txt
+file1.txt
+file2.txt
+a.txt
+file1.txt
+file2.txt
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+
+----------------NotSuffix------------------
+HELLO2.csv
+a.txt
+emptyFile
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+emptyFile
+hello.csv
+.DS_Store
+
+----------------checkCorretWarningLines------------------
+Warning in line 2
+Warning in line 5
+Warning in line 7
+Warning in line 9
+Warning in line 12
+Warning in line 15
+Warning in line 18
+Warning in line 21
+Warning in line 24
+Warning in line 27
+Warning in line 30
+Warning in line 33
+Warning in line 36
+Warning in line 39
+Warning in line 42
+Warning in line 45
+Warning in line 48
+Warning in line 51
+Warning in line 54
+Warning in line 57
+Warning in line 60
+Warning in line 62
+Warning in line 64
+Warning in line 66
+Warning in line 68
+Warning in line 70
+Warning in line 72
+Warning in line 74
+Warning in line 76
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+.DS_Store
+HELLO2.csv
+a.txt
+emptyFile
+file1.txt
+file2.txt
+hello.csv
+nsnkas.txt
+zzzz copy.txt
+zzzzzzzzzzzzzzzz.txt
+
+----------------.DS_Store------------------
+ERROR: Bad subsection name
